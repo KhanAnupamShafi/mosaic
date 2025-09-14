@@ -74,7 +74,16 @@
         </div>
       </main>
 
-      <Banner />
+      <footer>
+        <div class="px-4 sm:px-6 lg:px-8 pb-6 w-full max-w-9xl mx-auto text-center">
+          <p class="text-gray-500 dark:text-gray-400">
+            Theme distributed by 
+            <a href="https://themewagon.com/" class="text-blue-500 hover:underline" target="_blank">themewagon</a>
+          </p>
+        </div>
+      </footer>
+
+      <!-- <Banner /> -->
 
     </div> 
 
@@ -83,10 +92,9 @@
 
 <script>
 import { ref } from 'vue'
-import Sidebar from '../partials/Sidebar.vue'
-import Header from '../partials/Header.vue'
-import FilterButton from '../components/DropdownFilter.vue'
 import Datepicker from '../components/Datepicker.vue'
+import FilterButton from '../components/DropdownFilter.vue'
+import Banner from '../partials/Banner.vue'
 import DashboardCard01 from '../partials/dashboard/DashboardCard01.vue'
 import DashboardCard02 from '../partials/dashboard/DashboardCard02.vue'
 import DashboardCard03 from '../partials/dashboard/DashboardCard03.vue'
@@ -100,7 +108,8 @@ import DashboardCard10 from '../partials/dashboard/DashboardCard10.vue'
 import DashboardCard11 from '../partials/dashboard/DashboardCard11.vue'
 import DashboardCard12 from '../partials/dashboard/DashboardCard12.vue'
 import DashboardCard13 from '../partials/dashboard/DashboardCard13.vue'
-import Banner from '../partials/Banner.vue'
+import Header from '../partials/Header.vue'
+import Sidebar from '../partials/Sidebar.vue'
 
 export default {
   name: 'Dashboard',

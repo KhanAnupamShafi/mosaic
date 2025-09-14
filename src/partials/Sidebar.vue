@@ -71,14 +71,14 @@
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/dashboard/analytics" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="#!" custom v-slot="{ href, navigate }">
                     <li class="mb-1 last:mb-0">
                       <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Analytics</span>
                       </a>
                     </li>
                   </router-link> 
-                  <router-link to="/dashboard/fintech" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="#!" custom v-slot="{ href, navigate }">
                     <li class="mb-1 last:mb-0">
                       <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Fintech</span>
@@ -108,72 +108,72 @@
               </a>
               <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                 <ul class="pl-8 mt-1" :class="!parentLink.expanded && 'hidden'">
-                  <router-link to="/ecommerce/customers" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="#!" custom v-slot="{ href, navigate }">
                     <li class="mb-1 last:mb-0">
                       <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Customers</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/ecommerce/orders" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="#!" custom v-slot="{ href, navigate }">
                     <li class="mb-1 last:mb-0">
                       <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Orders</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/ecommerce/invoices" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="#!" custom v-slot="{ href, navigate }">
                     <li class="mb-1 last:mb-0">
                       <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Invoices</span>
                       </a>
                     </li>
                   </router-link>                  
-                  <router-link to="/ecommerce/shop" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="#1" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/ecommerce/shop') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Shop</span>
                       </a>
                     </li>
                   </router-link> 
-                  <router-link to="/ecommerce/shop-2" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="#!" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/ecommerce/shop-2') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Shop 2</span>
                       </a>
                     </li>
                   </router-link> 
-                  <router-link to="/ecommerce/product" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="#!" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/ecommerce/product') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Single Product</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/ecommerce/cart" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/ecommerce/cart" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/ecommerce/cart') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Cart</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/ecommerce/cart-2" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/ecommerce/cart-2" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/ecommerce/cart-2') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Cart 2</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/ecommerce/cart-3" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/ecommerce/cart-3" custom v-slot="{ href}">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/ecommerce/cart-3') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Cart 3</span>
                       </a>
                     </li>
                   </router-link>                  
-                  <router-link to="/ecommerce/pay" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/ecommerce/pay" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/ecommerce/pay') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Pay</span>
                       </a>
                     </li>
@@ -201,62 +201,62 @@
               </a>
               <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                 <ul class="pl-8 mt-1" :class="!parentLink.expanded && 'hidden'">
-                  <router-link to="/community/users-tabs" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/community/users-tabs" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/community/users-tabs') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Users - Tabs</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/community/users-tiles" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/community/users-tiles" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/community/users-tiles') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Users - Tiles</span>
                       </a>
                     </li>
-                  </router-link> 
-                  <router-link to="/community/profile" custom v-slot="{ href, navigate, isExactActive }">
+                  </router-link>
+                  <router-link to="/community/profile" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/community/profile') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Profile</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/community/feed" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/community/feed" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/community/feed') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Feed</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/community/forum" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/community/forum" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/community/forum') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Forum</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/community/forum-post" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/community/forum-post" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/community/forum-post') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Forum - Post</span>
                       </a>
                     </li>
-                  </router-link>                   
-                  <router-link to="/community/meetups" custom v-slot="{ href, navigate, isExactActive }">
+                  </router-link>
+                  <router-link to="/community/meetups" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/community/meetups') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Meetups</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/community/meetups-post" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/community/meetups-post" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/community/meetups-post') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Meetups - Post</span>
                       </a>
                     </li>
-                  </router-link>                  
+                  </router-link>
                 </ul>
               </div>
             </SidebarLinkGroup>
@@ -281,23 +281,23 @@
               </a>
               <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                 <ul class="pl-8 mt-1" :class="!parentLink.expanded && 'hidden'">
-                  <router-link to="/finance/cards" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/finance/cards" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/finance/cards') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Cards</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/finance/transactions" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/finance/transactions" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/finance/transactions') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Transactions</span>
                       </a>
                     </li>
                   </router-link> 
-                  <router-link to="/finance/transaction-details" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/finance/transaction-details" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/finance/transaction-details') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Transaction Details</span>
                       </a>
                     </li>
@@ -325,23 +325,23 @@
               </a>
               <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                 <ul class="pl-8 mt-1" :class="!parentLink.expanded && 'hidden'">
-                  <router-link to="/job/job-listing" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/job/job-listing" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/job/job-listing') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Listing</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/job/job-post" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/job/job-post" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/job/job-post') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Job Post</span>
                       </a>
                     </li>
                   </router-link> 
-                  <router-link to="/job/company-profile" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/job/company-profile" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/job/company-profile') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Company Profile</span>
                       </a>
                     </li>
@@ -369,16 +369,16 @@
               </a>
               <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                 <ul class="pl-8 mt-1" :class="!parentLink.expanded && 'hidden'">
-                  <router-link to="/tasks/kanban" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/tasks/kanban" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/tasks/kanban') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Kanban</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/tasks/list" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/tasks/list" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/tasks/list') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">List</span>
                       </a>
                     </li>
@@ -387,12 +387,12 @@
               </div>
             </SidebarLinkGroup>                  
             <!-- Messages -->
-            <router-link to="/messages" custom v-slot="{ href, navigate, isExactActive }">
-              <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r" :class="isExactActive && 'from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]'">
-                <a class="block text-gray-800 dark:text-gray-100 truncate transition" :class="isExactActive ? '' : 'hover:text-gray-900 dark:hover:text-white'" :href="href" @click="navigate">
+            <router-link to="#!" custom v-slot="{ href }">
+              <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r" :class="currentRoute.fullPath.includes('/messages') && 'from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]'">
+                <a class="block text-gray-800 dark:text-gray-100 truncate transition" :class="currentRoute.fullPath.includes('/messages') ? '' : 'hover:text-gray-900 dark:hover:text-white'" :href="href" @click="navigate">
                   <div class="flex items-center justify-between">
                     <div class="grow flex items-center">
-                      <svg class="shrink-0 fill-current" :class="isExactActive ? 'text-violet-500' : 'text-gray-400 dark:text-gray-500'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <svg class="shrink-0 fill-current" :class="currentRoute.fullPath.includes('/messages') ? 'text-violet-500' : 'text-gray-400 dark:text-gray-500'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                         <path d="M13.95.879a3 3 0 0 0-4.243 0L1.293 9.293a1 1 0 0 0-.274.51l-1 5a1 1 0 0 0 1.177 1.177l5-1a1 1 0 0 0 .511-.273l8.414-8.414a3 3 0 0 0 0-4.242L13.95.879ZM11.12 2.293a1 1 0 0 1 1.414 0l1.172 1.172a1 1 0 0 1 0 1.414l-8.2 8.2-3.232.646.646-3.232 8.2-8.2Z" />
                         <path d="M10 14a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2h-5Z" />
                       </svg>                      
@@ -407,11 +407,11 @@
               </li>
             </router-link>
             <!-- Inbox -->
-            <router-link to="/inbox" custom v-slot="{ href, navigate, isExactActive }">
-              <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r" :class="isExactActive && 'from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]'">
-                <a class="block text-gray-800 dark:text-gray-100 truncate transition" :class="isExactActive ? '' : 'hover:text-gray-900 dark:hover:text-white'" :href="href" @click="navigate">
+            <router-link to="#!" custom v-slot="{ href }">
+              <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r" :class="currentRoute.fullPath.includes('/inbox') && 'from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]'">
+                <a class="block text-gray-800 dark:text-gray-100 truncate transition" :class="currentRoute.fullPath.includes('/inbox') ? '' : 'hover:text-gray-900 dark:hover:text-white'" :href="href" @click="navigate">
                   <div class="flex items-center">
-                    <svg class="shrink-0 fill-current" :class="isExactActive ? 'text-violet-500' : 'text-gray-400 dark:text-gray-500'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <svg class="shrink-0 fill-current" :class="currentRoute.fullPath.includes('/inbox') ? 'text-violet-500' : 'text-gray-400 dark:text-gray-500'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                       <path d="M11.92 6.851c.044-.027.09-.05.137-.07.481-.275.758-.68.908-1.256.126-.55.169-.81.357-2.058.075-.498.144-.91.217-1.264-4.122.75-7.087 2.984-9.12 6.284a18.087 18.087 0 0 0-1.985 4.585 17.07 17.07 0 0 0-.354 1.506c-.05.265-.076.448-.086.535a1 1 0 0 1-1.988-.226c.056-.49.209-1.312.502-2.357a20.063 20.063 0 0 1 2.208-5.09C5.31 3.226 9.306.494 14.913.004a1 1 0 0 1 .954 1.494c-.237.414-.375.993-.567 2.267-.197 1.306-.244 1.586-.392 2.235-.285 1.094-.789 1.853-1.552 2.363-.748 3.816-3.976 5.06-8.515 4.326a1 1 0 0 1 .318-1.974c2.954.477 4.918.025 5.808-1.556-.628.085-1.335.121-2.127.121a1 1 0 1 1 0-2c1.458 0 2.434-.116 3.08-.429Z" />
                     </svg>  
                     <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Inbox</span>
@@ -420,11 +420,11 @@
               </li>
             </router-link>
             <!-- Calendar -->
-            <router-link to="/calendar" custom v-slot="{ href, navigate, isExactActive }">
-              <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r" :class="isExactActive && 'from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]'">
-                <a class="block text-gray-800 dark:text-gray-100 truncate transition" :class="isExactActive ? '' : 'hover:text-gray-900 dark:hover:text-white'" :href="href" @click="navigate">
+            <router-link to="#!" custom v-slot="{ href }">
+              <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r" :class="currentRoute.fullPath.includes('/calendar') && 'from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]'">
+                <a class="block text-gray-800 dark:text-gray-100 truncate transition" :class="currentRoute.fullPath.includes('/calendar') ? '' : 'hover:text-gray-900 dark:hover:text-white'" :href="href" @click="navigate">
                   <div class="flex items-center">
-                    <svg class="shrink-0 fill-current" :class="isExactActive ? 'text-violet-500' : 'text-gray-400 dark:text-gray-500'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <svg class="shrink-0 fill-current" :class="currentRoute.fullPath.includes('/calendar') ? 'text-violet-500' : 'text-gray-400 dark:text-gray-500'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                       <path d="M5 4a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z" />
                       <path d="M4 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4ZM2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Z" />
                       <path d="M4 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4ZM2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Z" />
@@ -435,11 +435,11 @@
               </li>
             </router-link>
             <!-- Campaigns -->
-            <router-link to="/campaigns" custom v-slot="{ href, navigate, isExactActive }">
-              <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r" :class="isExactActive && 'from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]'">
-                <a class="block text-gray-800 dark:text-gray-100 truncate transition" :class="isExactActive ? '' : 'hover:text-gray-900 dark:hover:text-white'" :href="href" @click="navigate">
+            <router-link to="#!" custom v-slot="{ href }">
+              <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r" :class="currentRoute.fullPath.includes('/campaigns') && 'from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]'">
+                <a class="block text-gray-800 dark:text-gray-100 truncate transition" :class="currentRoute.fullPath.includes('/campaigns') ? '' : 'hover:text-gray-900 dark:hover:text-white'" :href="href" @click="navigate">
                   <div class="flex items-center">
-                    <svg class="shrink-0 fill-current" :class="isExactActive ? 'text-violet-500' : 'text-gray-400 dark:text-gray-500'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <svg class="shrink-0 fill-current" :class="currentRoute.fullPath.includes('/campaigns') ? 'text-violet-500' : 'text-gray-400 dark:text-gray-500'" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                       <path d="M6.649 1.018a1 1 0 0 1 .793 1.171L6.997 4.5h3.464l.517-2.689a1 1 0 1 1 1.964.378L12.498 4.5h2.422a1 1 0 0 1 0 2h-2.807l-.77 4h2.117a1 1 0 1 1 0 2h-2.501l-.517 2.689a1 1 0 1 1-1.964-.378l.444-2.311H5.46l-.517 2.689a1 1 0 1 1-1.964-.378l.444-2.311H1a1 1 0 1 1 0-2h2.807l.77-4H2.46a1 1 0 0 1 0-2h2.5l.518-2.689a1 1 0 0 1 1.17-.793ZM9.307 10.5l.77-4H6.612l-.77 4h3.464Z" />
                     </svg> 
                     <span class="text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Campaigns</span>
@@ -467,44 +467,44 @@
               </a>
               <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                 <ul class="pl-8 mt-1" :class="!parentLink.expanded && 'hidden'">
-                  <router-link to="/settings/account" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/settings/account" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/settings/account') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">My Account</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/settings/notifications" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/settings/notifications" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/settings/notifications') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">My Notifications</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/settings/apps" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/settings/apps" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/settings/apps') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Connected Apps</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/settings/plans" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/settings/plans" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/settings/plans') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Plans</span>
                       </a>
                     </li>
                   </router-link>                       
-                  <router-link to="/settings/billing" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/settings/billing" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/settings/billing') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Billing & Invoices</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/settings/feedback" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/settings/feedback" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/settings/feedback') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Give Feedback</span>
                       </a>
                     </li>
@@ -533,37 +533,37 @@
               </a>
               <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                 <ul class="pl-8 mt-1" :class="!parentLink.expanded && 'hidden'">
-                  <router-link to="/utility/changelog" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/utility/changelog" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/utility/changelog') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Changelog</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/utility/roadmap" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/utility/roadmap" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/utility/roadmap') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Roadmap</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/utility/faqs" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/utility/faqs" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/utility/faqs') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">FAQs</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/utility/empty-state" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/utility/empty-state" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/utility/empty-state') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Empty State</span>
                       </a>
                     </li>
                   </router-link>  
-                  <router-link to="/utility/404" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/utility/404" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/utility/404') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">404</span>
                       </a>
                     </li>
@@ -600,23 +600,23 @@
               </a>
               <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                 <ul class="pl-8 mt-1" :class="!parentLink.expanded && 'hidden'">
-                  <router-link to="/signin" custom v-slot="{ href, navigate }">
+                  <router-link to="/signin" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" :href="href" @click="navigate">
+                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Sign in</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/signup" custom v-slot="{ href, navigate }">
+                  <router-link to="/signup" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" :href="href" @click="navigate">
+                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Sign up</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/reset-password" custom v-slot="{ href, navigate }">
+                  <router-link to="/reset-password" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" :href="href" @click="navigate">
+                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Reset Password</span>
                       </a>
                     </li>
@@ -644,30 +644,30 @@
               </a>
               <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                 <ul class="pl-8 mt-1" :class="!parentLink.expanded && 'hidden'">
-                  <router-link to="/onboarding-01" custom v-slot="{ href, navigate }">
+                  <router-link to="/onboarding-01" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" :href="href" @click="navigate">
+                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Step 1</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/onboarding-02" custom v-slot="{ href, navigate }">
+                  <router-link to="/onboarding-02" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" :href="href" @click="navigate">
+                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Step 2</span>
                       </a>
                     </li>
                   </router-link>
                   <router-link to="/onboarding-03" custom v-slot="{ href, navigate }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" :href="href" @click="navigate">
+                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Step 3</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/onboarding-04" custom v-slot="{ href, navigate }">
+                  <router-link to="/onboarding-04" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" :href="href" @click="navigate">
+                      <a class="block text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition truncate" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Step 4</span>
                       </a>
                     </li>
@@ -695,91 +695,91 @@
               </a>
               <div class="lg:hidden lg:sidebar-expanded:block 2xl:block">
                 <ul class="pl-8 mt-1" :class="!parentLink.expanded && 'hidden'">
-                  <router-link to="/component/button" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/button" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/button') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Button</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/component/form" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/form" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/form') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Input Form</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/component/dropdown" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/dropdown" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/dropdown') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Dropdown</span>
                       </a>
                     </li>
                   </router-link> 
-                  <router-link to="/component/alert" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/alert" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/alert') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Alert & Banner</span>
                       </a>
                     </li>
                   </router-link> 
-                  <router-link to="/component/modal" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/modal" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/modal') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Modal</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/component/pagination" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/pagination" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/pagination') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Pagination</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/component/tabs" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/tabs" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/tabs') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Tabs</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/component/breadcrumb" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/breadcrumb" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/breadcrumb') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Breadcrumb</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/component/badge" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/badge" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/badge') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Badge</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/component/avatar" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/avatar" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/avatar') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Avatar</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/component/tooltip" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/tooltip" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/tooltip') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Tooltip</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/component/accordion" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/accordion" custom v-slot="{ href }">
                     <li class="mb-1 last:mb-0">
-                      <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
+                      <a class="block transition truncate" :class="currentRoute.fullPath.includes('/component/accordion') ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" href="#!" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Accordion</span>
                       </a>
                     </li>
                   </router-link>
-                  <router-link to="/component/icons" custom v-slot="{ href, navigate, isExactActive }">
+                  <router-link to="/component/icons" custom v-slot="{ href, isExactActive }">
                     <li class="mb-1 last:mb-0">
                       <a class="block transition truncate" :class="isExactActive ? 'text-violet-500' : 'text-gray-500/90 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200'" :href="href" @click="navigate">
                         <span class="text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Icons</span>
@@ -810,7 +810,7 @@
 </template>
 
 <script>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 import SidebarLinkGroup from './SidebarLinkGroup.vue'
